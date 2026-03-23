@@ -1,16 +1,20 @@
 import pandas as pd
 
-# Load dataset (using built-in sample dataset from sklearn)
-from sklearn.datasets import load_iris
+# Load dataset (online CSV)
+data = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv")
 
-data = load_iris()
-df = pd.DataFrame(data.data, columns=data.feature_names)
+# Print dataset shape
+print("Dataset Shape:", data.shape)
 
-print("First 5 rows:")
-print(df.head())
+# Print column names
+print("\nColumn Names:")
+print(data.columns)
 
+# Basic statistics
 print("\nBasic Statistics:")
-print(df.describe())
+print(data.describe())
 
-print("\nDataset Shape:")
-print(df.shape)
+# First 5 rows
+print("\nFirst 5 rows:")
+print(data.head())
+data = pd.read_csv("iris.csv")
